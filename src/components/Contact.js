@@ -37,7 +37,7 @@ export default function Contact() {
                         marginHeight={0}
                         marginWidth={0}
                         style={{ filter: "opacity(0.7)" }}
-                        src="https://www.google.com/maps/embed/v1/place?q=Durham,+NH,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                        src="https://www.google.com/maps/embed/v1/place?q=University+of+New+Hampshire,+Main+Street,+Durham,+NH,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                     />
                     <div className="bg-gray-900 relative flex  py-6 rounded shadow-md">
                         <div className="lg:w-1/2 px-6">
@@ -86,17 +86,7 @@ export default function Contact() {
                             LinkedIn
                         </a>
                     </div>
-                    <div className="relative mb-4">
-                        <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-                            Name
-                        </label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                        />
-                    </div>
+
                     <div className="relative mb-4">
                         <label htmlFor="name" className="leading-7 text-sm text-gray-400">
                             Name

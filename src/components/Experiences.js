@@ -1,5 +1,5 @@
 import React from "react";
-import { AcademicCapIcon } from "@heroicons/react/solid";
+import { BriefcaseIcon } from "@heroicons/react/solid";
 
 export default function Experiences() {
     return (
@@ -9,7 +9,7 @@ export default function Experiences() {
                     className="lg:flex-grow md:w-3/4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center relative"
                 >
                     <h1 className="sm:text-5xl text-4xl font-medium title-font text-white mb-9 mx-auto">
-                        <AcademicCapIcon className="w-12 inline-block mb-4" /> Experiences
+                        <BriefcaseIcon className="w-12 inline-block mb-4" /> Experiences
                     </h1>
                     <div className="mb-8 leading-relaxed">
                         <div className="border p-4 rounded bg-gray-800 mb-6 relative flex items-start">
