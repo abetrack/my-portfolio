@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Reveal from "./Reveal";
 import { roles, spans, TIMELINE_START } from "../data";
 import { formatDuration } from "../time";
@@ -27,6 +27,29 @@ function MiniTrack({ span }) {
     <div className="mini-track" aria-hidden="true">
       <span className={span.end ? "" : "live"} style={{ left: `${left}%`, width: `${width}%` }} />
     </div>
+  );
+}
+
+function Bullets({ role }) {
+  const [all, setAll] = useState(false);
+  const limit = role.visible ?? role.bullets.length;
+  const shown = all ? role.bullets : role.bullets.slice(0, limit);
+  const hidden = role.bullets.length - limit;
+  return (
+    <>
+      <ul className="mt-5 max-w-3xl space-y-3">
+        {shown.map((b) => (
+          <li key={b} className="relative pl-5 before:absolute before:left-0 before:top-[0.72em] before:h-[2px] before:w-2.5 before:bg-span">
+            {withFigures(b, role.figures)}
+          </li>
+        ))}
+      </ul>
+      {hidden > 0 && (
+        <button type="button" onClick={() => setAll((v) => !v)} aria-expanded={all} className="link mt-4 inline-flex min-h-[44px] items-center font-mono text-sm">
+          {all ? "Show fewer" : `Show ${hidden} more`}
+        </button>
+      )}
+    </>
   );
 }
 
@@ -59,13 +82,7 @@ export default function Experience() {
                   <p className="mt-1 text-slate">
                     {role.company} · {role.place}
                   </p>
-                  <ul className="mt-5 max-w-3xl space-y-3">
-                    {role.bullets.map((b) => (
-                      <li key={b} className="relative pl-5 before:absolute before:left-0 before:top-[0.72em] before:h-[2px] before:w-2.5 before:bg-span">
-                        {withFigures(b, role.figures)}
-                      </li>
-                    ))}
-                  </ul>
+                  <Bullets role={role} />
                   <p className="tag mt-6">{role.stack.join(" / ")}</p>
                 </div>
               </Reveal>

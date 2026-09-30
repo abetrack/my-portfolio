@@ -58,9 +58,13 @@ export const roles = [
       "Own Apache Kafka event-driven workflows that move hundreds of thousands of messages between backend services.",
       "Cut API response times by 70% through performance tuning and architecture changes.",
       "Maintain the Jenkins and Groovy pipelines that build, test and release our services, and hold automated coverage above 80% with JUnit, Pytest, Karate, Sealights and SonarQube.",
+      "Built observability pipelines with OpenTelemetry, Prometheus and Grafana, so the team gets real-time monitoring, distributed tracing and production performance analysis across microservices.",
+      "Wrote Python automation that found and removed 100% of exposed secrets from Amazon S3 buckets, which tightened cloud security and ended the manual cleanup.",
+      "Work with engineering teams to investigate and resolve production incidents through ServiceNow.",
     ],
-    figures: ["70%", "80%"],
-    stack: ["Java", "Spring Boot", "Python", "AWS EKS", "Kafka", "Snowflake", "Jenkins", "Groovy"],
+    figures: ["70%", "80%", "100%"],
+    visible: 5,
+    stack: ["Java", "Spring Boot", "Python", "AWS EKS", "Kafka", "Snowflake", "Jenkins", "Groovy", "OpenTelemetry", "Prometheus", "Grafana", "ServiceNow"],
   },
   {
     id: "leap",
@@ -69,12 +73,14 @@ export const roles = [
     place: "Merrimack, NH",
     when: "Jun 2024 – Oct 2024",
     bullets: [
+      "Completed 20 weeks of full-time training in full-stack development, cloud delivery and DevOps practice.",
       "Built 3-tier applications with Angular, Spring Boot and Oracle SQL and wired them together over REST.",
+      "Contributed to a compliance-tracking tool built on Snowflake, MyBatis and AG Grid.",
       "Practiced CI/CD with Jenkins and GitHub workflows, promoting builds through dev, QA and prod.",
       "Applied secure coding and testing practice with JUnit, Cucumber and Angular Testing Library.",
     ],
     figures: [],
-    stack: ["Angular", "Spring Boot", "Oracle SQL", "Jenkins", "Cucumber"],
+    stack: ["Angular", "Spring Boot", "Oracle SQL", "Snowflake", "MyBatis", "AG Grid", "Jenkins", "Cucumber"],
   },
   {
     id: "ally",
@@ -85,7 +91,7 @@ export const roles = [
     bullets: [
       "Developed secure microservices in Java, Spring Boot and Oracle, integrating with REST and SOAP APIs.",
       "Designed and carried out the migration of legacy services to AWS with Terraform.",
-      "Tested with Postman, Tomcat and JUnit, then shipped to production at enterprise scale.",
+      "Deployed production-ready microservices that followed secure coding standards, tested with Postman, Tomcat and JUnit.",
       "Worked alongside the Scrum Master, product owners and lead engineers through Agile sprints.",
     ],
     figures: [],
@@ -99,7 +105,7 @@ export const roles = [
     when: "Feb 2022 – May 2023",
     bullets: [
       "Tested and certified hosts and routers for IPv6 adoption, running conformance and interoperability tests against ISO/IEC standards.",
-      "Scripted device drivers in Tcl and Expect so the test suites could run against new hardware.",
+      "Wrote automation scripts in Tcl and Expect to validate protocol behavior and to drive the test suites against new hardware.",
       "Debugged and troubleshot failures through each agile test cycle, and wrote the conformance and interoperability reports on deadline.",
     ],
     figures: [],
@@ -111,17 +117,22 @@ export const skillGroups = [
   {
     name: "Services",
     core: ["Java", "Spring Boot", "Python"],
-    rest: ["Scala", "TypeScript", "JavaScript", "SQL"],
+    rest: ["Scala", "TypeScript", "JavaScript", "Node.js", "Flask", "FastAPI", "SQL"],
   },
   {
     name: "Data and messaging",
     core: ["Apache Kafka", "Snowflake"],
-    rest: ["Amazon S3", "Oracle SQL", "PostgreSQL", "Flyway"],
+    rest: ["Amazon S3", "Oracle SQL", "PostgreSQL", "Flyway", "MyBatis", "Airflow"],
   },
   {
     name: "Cloud and delivery",
     core: ["AWS EKS", "Kubernetes", "Jenkins"],
-    rest: ["Docker", "Terraform", "Groovy", "GitHub", "GitLab", "Maven", "Azure", "Apigee"],
+    rest: ["Docker", "Terraform", "Groovy", "Git", "GitHub", "GitLab", "Maven", "Azure", "Apigee"],
+  },
+  {
+    name: "Observability",
+    core: ["OpenTelemetry", "Prometheus", "Grafana"],
+    rest: ["ServiceNow"],
   },
   {
     name: "Quality",
@@ -131,7 +142,12 @@ export const skillGroups = [
   {
     name: "Front end",
     core: ["React", "Next.js"],
-    rest: ["Angular", "Tailwind", "HTML", "CSS"],
+    rest: ["Angular", "AG Grid", "Tailwind", "HTML", "CSS"],
+  },
+  {
+    name: "Data science",
+    core: [],
+    rest: ["Pandas", "NumPy", "Matplotlib", "XGBoost", "LightGBM"],
   },
   {
     name: "Also",

@@ -138,9 +138,11 @@ function CareerOSDetail() {
       <Bullets
         items={[
           "Spring Boot API on Java 21, with PostgreSQL and 32 Flyway migrations.",
+          "Fit scoring that pairs deterministic skill matching over a 12-profession vocabulary with the model's read of strengths and gaps.",
+          "A Chrome extension (Manifest V3) that captures postings from 12 job platforms, including LinkedIn, Workday and Greenhouse, with a tiered JSON-LD and DOM extractor.",
           "Spring Security with sessions stored in the database through Spring Session JDBC.",
           "Résumé export to PDF (Apache PDFBox) and DOCX (Apache POI), laid out to pass applicant tracking systems.",
-          "Next.js 14 and TypeScript front end, plus a Chrome extension (Manifest V3) that captures a job from the page you're on.",
+          "Next.js 14 and TypeScript front end.",
           "Applied applications keep a frozen copy of the résumé you sent, and interviews export to a calendar file.",
           "350 automated tests across JUnit, Vitest and React Testing Library. Deployed on Railway and Vercel.",
         ]}
@@ -276,7 +278,8 @@ function WidgetsDetail() {
       <H>How it works</H>
       <p className="mt-3 max-w-2xl">
         Each widget pulls from its own source, such as an API or an RSS feed, caches what it gets, and renders the result in JavaScript,
-        HTML and CSS. We planned to measure the value by comparing portal traffic before and after each widget shipped.
+        HTML and CSS. Putting campus resources in one dashboard was meant to lift engagement, and we planned to measure that by comparing
+        portal traffic before and after each widget shipped.
       </p>
 
       <H>Recognition</H>
@@ -352,6 +355,56 @@ function GpsDetail() {
   );
 }
 
+/* ---------- Quantitative Strategy Simulator ---------- */
+
+const quantSteps = [
+  ["Ingest", "Load price data for 200+ tickers."],
+  ["Label", "Label the data the strategies work from."],
+  ["Simulate", "Simulate the trades, using technical indicators and state-machine logic."],
+  ["Evaluate", "Measure performance and produce automated reports and charts."],
+];
+
+function QuantDetail() {
+  return (
+    <>
+      <p className="max-w-2xl">
+        A Python framework for backtesting rule-based equity strategies. A strategy is a set of technical-indicator rules and a state
+        machine. The framework runs it over historical prices, simulates the trades, and measures how it did.
+      </p>
+
+      <H>How a run flows</H>
+      <ol className="mt-4 grid gap-3 sm:grid-cols-2" aria-label="Pipeline stages in order">
+        {quantSteps.map(([name, text], i) => (
+          <li key={name} className="rounded-2xl border border-rule bg-paper/40 p-4">
+            <p className="font-mono text-xs text-slate">{i + 1}</p>
+            <p className="display mt-1 text-lg font-semibold">{name}</p>
+            <p className="mt-1 text-sm text-slate">{text}</p>
+          </li>
+        ))}
+      </ol>
+
+      <H>What it measures</H>
+      <p className="mt-3 max-w-2xl">
+        Expectancy, win rate, payoff ratio and Sortino ratio, with automated performance reports and visualizations. The framework is modular.
+      </p>
+      <div className="mt-4 flex flex-wrap gap-2">
+        {["Expectancy", "Win rate", "Payoff ratio", "Sortino ratio"].map((m) => (
+          <mark key={m} className="fig">
+            {m}
+          </mark>
+        ))}
+      </div>
+
+      <Facts
+        rows={[
+          ["Scale", "200+ tickers"],
+          ["Stack", "Python, Pandas, NumPy, Matplotlib, XGBoost, LightGBM"],
+        ]}
+      />
+    </>
+  );
+}
+
 /* ---------- registry ---------- */
 
 export const PROJECTS = {
@@ -359,5 +412,6 @@ export const PROJECTS = {
   "deal-tracker": { kicker: "Personal project", title: "Deal Tracker", meta: "Next.js, TypeScript, node:sqlite", Detail: DealTrackerDetail },
   widgets: { kicker: "Undergraduate research · Aug 2023 – May 2024", title: "USNH myPortal widgets", meta: "JavaScript, Scala, HTML, CSS", Detail: WidgetsDetail },
   "bullet-zone": { kicker: "University project · Aug 2022 – Nov 2022", title: "Bullet Zone", meta: "Java, Python, SQLite, Android Studio", Detail: BulletZoneDetail },
+  "quant-simulator": { kicker: "Python project", title: "Quantitative Strategy Simulator", meta: "Python, Pandas, NumPy, Matplotlib, XGBoost, LightGBM", Detail: QuantDetail },
   "gps-visualizer": { kicker: "University project · Nov 2023", title: "GPS Visualizer", meta: "C, Python, Dijkstra's algorithm", Detail: GpsDetail },
 };

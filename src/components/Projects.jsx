@@ -5,8 +5,8 @@ import Tour, { extensionFrame, imageFrame } from "./Tour";
 import { PROJECTS } from "../projects";
 
 const steps = [
-  ["Capture", "A Chrome extension reads the job posting off the page you're on, so it works on sites that block scrapers."],
-  ["Score", "Gives a fit score with strengths and gaps. It only runs when you click, since it costs credits."],
+  ["Capture", "A Chrome extension reads the job posting off the page you're on. It works on 12 job platforms, including LinkedIn, Workday and Greenhouse."],
+  ["Score", "Matches skills against a 12-profession vocabulary, then asks the model for strengths and gaps. It only runs when you click, since it costs credits."],
   ["Tailor", "The model chooses bullets from your profile and the server looks them up, so nothing gets invented."],
   ["Export", "A one-page, ATS-safe PDF or DOCX."],
   ["Track", "Status history, a frozen copy of the résumé you sent, and calendar export."],
@@ -163,6 +163,21 @@ const more = [
     when: "Aug 2022 – Nov 2022",
     text: "An Android tank game with global multiplayer and personal accounts, built by a team of six.",
     thumb: <img src="/tank-still.png" alt="" loading="lazy" className="h-full w-full scale-[2.1] object-cover" />,
+  },
+  {
+    id: "quant-simulator",
+    title: "Quantitative Strategy Simulator",
+    when: "Python, Pandas, NumPy",
+    text: "A framework for backtesting rule-based equity strategies across 200+ tickers, with metrics like expectancy and Sortino ratio.",
+    thumb: (
+      <svg viewBox="0 0 120 90" className="h-full w-full text-span" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+        <path d="M18 62l24-16 22 10 36-30" />
+        <circle cx="18" cy="62" r="4" fill="currentColor" />
+        <circle cx="42" cy="46" r="4" fill="currentColor" />
+        <circle cx="64" cy="56" r="4" fill="currentColor" />
+        <circle cx="100" cy="26" r="4" fill="currentColor" />
+      </svg>
+    ),
   },
   {
     id: "gps-visualizer",
