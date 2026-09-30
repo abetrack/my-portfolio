@@ -551,7 +551,7 @@ html.sheet-open {
   position: relative;
   height: 100%;
   max-width: 100%;
-  aspect-ratio: 460 / 593;
+  aspect-ratio: 840 / 1030;
   overflow: hidden;
   border-radius: 16px;
   background: #fff;
@@ -577,14 +577,14 @@ html.sheet-open {
 .popup-cursor {
   position: absolute;
   left: 88%;
-  top: 96%;
+  top: 95%;
   opacity: 0;
   filter: drop-shadow(0 2px 3px rgb(0 0 0 / 0.4));
 }
 .popup-ripple {
   position: absolute;
-  left: 52%;
-  top: 78%;
+  left: 50%;
+  top: 80.7%;
   width: 34px;
   height: 34px;
   margin: -17px 0 0 -17px;
@@ -626,13 +626,13 @@ html.sheet-open {
 }
 @keyframes popup-scroll {
   0%, 44% { transform: translateY(0); }
-  92%, 100% { transform: translateY(-53%); }
+  92%, 100% { transform: translateY(-58.6%); }
 }
 @keyframes popup-cursor {
-  0%, 12% { opacity: 0; left: 88%; top: 96%; }
-  15% { opacity: 1; left: 88%; top: 96%; }
-  27% { opacity: 1; left: 52%; top: 78%; }
-  36%, 100% { opacity: 0; left: 52%; top: 78%; }
+  0%, 12% { opacity: 0; left: 88%; top: 95%; }
+  15% { opacity: 1; left: 88%; top: 95%; }
+  27% { opacity: 1; left: 52%; top: 82%; }
+  36%, 100% { opacity: 0; left: 52%; top: 82%; }
 }
 @keyframes popup-ripple {
   0%, 28% { opacity: 0; transform: scale(0.3); }
@@ -648,5 +648,64 @@ html.sheet-open {
   }
   .popup .popup-fit {
     opacity: 1;
+  }
+}
+
+/* ---------- UNH badge ---------- */
+
+.badge {
+  position: relative;
+  width: min(17rem, 78vw);
+  padding: 2.2rem 1.6rem 1.1rem;
+  border-radius: 1.5rem;
+  background: #f2f5f3;
+  color: #28373d;
+  box-shadow: 0 30px 60px -28px rgb(0 0 0 / 0.65);
+  transform-origin: 50% 0;
+  transform: rotate(-2deg);
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.5s ease;
+}
+.badge:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 0 40px 70px -30px rgb(0 0 0 / 0.7);
+}
+.badge-slot {
+  position: absolute;
+  top: 0.85rem;
+  left: 50%;
+  width: 3.2rem;
+  height: 0.6rem;
+  margin-left: -1.6rem;
+  border-radius: 999px;
+  background: rgb(var(--paper));
+  box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.5);
+}
+.badge-meta {
+  margin-top: 0.9rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid rgb(40 55 61 / 0.18);
+  font-family: "Geist Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(40 55 61 / 0.75);
+}
+.js .is-in .badge {
+  animation: badge-swing 2.2s cubic-bezier(0.3, 0.2, 0.3, 1) backwards;
+}
+@keyframes badge-swing {
+  0% { transform: rotate(11deg); }
+  28% { transform: rotate(-6deg); }
+  52% { transform: rotate(3.5deg); }
+  74% { transform: rotate(-3deg); }
+  100% { transform: rotate(-2deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .is-in .badge {
+    animation: none;
+  }
+  .badge {
+    transition: none;
   }
 }

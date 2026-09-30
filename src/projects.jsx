@@ -79,20 +79,18 @@ export function RouteMap() {
   );
 }
 
-/* ---------- CareerOS ---------- */
+/* ---------- Shotworthy ---------- */
 
-function CareerOSDetail() {
+function ShotworthyDetail() {
   const [i, setI] = useState(0);
   const [playing, setPlaying] = useState(true);
   const frames = useMemo(
     () => [
-      extensionFrame({ label: "Extension", caption: "The Chrome extension reads the job off the page you're on and fills in the title, company and location. Check my fit runs the score right there." }),
-      imageFrame({ id: "score", label: "Fit score", src: "/careeros/fit-score.jpg", alt: "A fit score of 60 with strengths and gaps side by side", caption: "A fit score for one job, with strengths and gaps side by side. It only runs when you click, since it costs credits." }),
-      imageFrame({ id: "tailor", label: "Tailoring", src: "/careeros/evidence.jpg", alt: "Each résumé bullet with the reason it was chosen", caption: "Every bullet on the tailored résumé says why it's there: which job terms it matches, or that it's filler to fill the page." }),
-      imageFrame({ id: "export", label: "Résumé", src: "/careeros/evidence.jpg", cls: "origin-bottom scale-[1.5]", alt: "The finished one-page résumé preview", caption: "The result is a one-page, ATS-safe résumé you can download as PDF or DOCX." }),
-      imageFrame({ id: "track", label: "Applications", src: "/careeros/queue.jpg", alt: "The applications list", caption: "The home screen leads with what needs attention: interviews to prep for, and jobs you saved but never marked as applied." }),
-      imageFrame({ id: "board", label: "Board", src: "/careeros/board.jpg", alt: "Applications on a board", caption: "The same applications as a board you drag between Saved, Applied, Interviewing, Offered and Rejected." }),
-      imageFrame({ id: "profile", label: "Career profile", src: "/careeros/profile.jpg", alt: "The career profile", caption: "Everything you've done in one place, with hints on weak bullets. Résumés are built from this, so it can be longer than any one résumé." }),
+      extensionFrame({ label: "Capture", caption: "The Chrome extension reads the job off the page you're on and fills in the title, company, location and description. Check my fit scores it right there." }),
+      imageFrame({ id: "score", label: "Score", src: "/shotworthy/score.jpg", alt: "A fit score of 68 with strengths and gaps side by side", caption: "The fit score for one job, with strengths and gaps side by side. It only runs when you click, since it costs credits." }),
+      imageFrame({ id: "tailor", label: "Tailor", src: "/shotworthy/tailor.jpg", alt: "Each résumé bullet with the job terms it matches", caption: "The tailored résumé picks bullets from the profile. Each one says why it's there: the job terms it matches, or that it just fills the page. You can override any of them." }),
+      imageFrame({ id: "export", label: "Export", src: "/shotworthy/export.jpg", alt: "The finished one-page résumé with PDF and DOCX download buttons", caption: "The result is a one-page, ATS-safe résumé you download as PDF or DOCX. The page above it says every line comes from the profile." }),
+      imageFrame({ id: "track", label: "Track", src: "/shotworthy/track.jpg", alt: "The applications list", caption: "Every application in one list with its fit score and status, and a prompt for the next thing to do." }),
     ],
     []
   );
@@ -121,12 +119,12 @@ function CareerOSDetail() {
           {playing ? "Pause tour" : "Play tour"}
         </button>
       </div>
-      <p className="mt-2 max-w-2xl text-sm text-slate">{frames[i].caption} Demo data.</p>
+      <p className="mt-2 max-w-2xl text-sm text-slate">{frames[i].caption} This is my own account, with company names hidden.</p>
 
       <H>Why I built it</H>
       <p className="mt-3 max-w-2xl">
         A one-page résumé fits about twenty bullets. Five years of work is closer to a hundred, so every application is a guess
-        about which twenty to send. Ask a chatbot to fix that and it will add a metric you never measured. CareerOS keeps the whole
+        about which twenty to send. Ask a chatbot to fix that and it will add a metric you never measured. Shotworthy keeps the whole
         hundred in one profile and picks the right ones for each job.
       </p>
       <p className="mt-3 max-w-2xl">
@@ -150,10 +148,10 @@ function CareerOSDetail() {
       <Facts
         rows={[
           ["Stack", "Java 21, Spring Boot, PostgreSQL, Flyway, Next.js, TypeScript, Tailwind, Chrome MV3, Claude API"],
-          ["Status", "Deployed. Shipping under the product name Shotworthy."],
+          ["Status", "Deployed on Railway and Vercel."],
         ]}
       />
-      <a href={links.careeros} target="_blank" rel="noreferrer" className="link mt-6 inline-block font-medium">
+      <a href={links.shotworthy} target="_blank" rel="noreferrer" className="link mt-6 inline-block font-medium">
         View the repository
       </a>
     </>
@@ -408,7 +406,7 @@ function QuantDetail() {
 /* ---------- registry ---------- */
 
 export const PROJECTS = {
-  careeros: { kicker: "Personal project", title: "CareerOS", meta: "Java, Spring Boot, PostgreSQL, Next.js, Claude API", Detail: CareerOSDetail },
+  shotworthy: { kicker: "Personal project", title: "Shotworthy", meta: "Java, Spring Boot, PostgreSQL, Next.js, Claude API", Detail: ShotworthyDetail },
   "deal-tracker": { kicker: "Personal project", title: "Deal Tracker", meta: "Next.js, TypeScript, node:sqlite", Detail: DealTrackerDetail },
   widgets: { kicker: "Undergraduate research · Aug 2023 – May 2024", title: "USNH myPortal widgets", meta: "JavaScript, Scala, HTML, CSS", Detail: WidgetsDetail },
   "bullet-zone": { kicker: "University project · Aug 2022 – Nov 2022", title: "Bullet Zone", meta: "Java, Python, SQLite, Android Studio", Detail: BulletZoneDetail },

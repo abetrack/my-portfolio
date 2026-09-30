@@ -15,7 +15,7 @@ npm run build    # outputs dist/
 - `src/components/Trace.jsx` — the career waterfall in the hero, drawn to scale from the dates in `data.js`.
 - `src/index.css` — design tokens live in `tailwind.config.js`; bespoke motion (trace, merge demo, reveals) is here.
 - `public/Resume.pdf` — the résumé linked from the nav, hero and contact section.
-- `src/projects.jsx` — the content of each project sheet. `src/components/Tour.jsx` drives the animated CareerOS tour.
+- `src/projects.jsx` — the content of each project sheet. `src/components/Tour.jsx` drives the animated Shotworthy tour.
 
 ## Contact form
 

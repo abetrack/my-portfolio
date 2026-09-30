@@ -12,7 +12,7 @@ export default function About() {
           </p>
           <p className="mt-6 text-lg text-slate">
             Before that I interned at Ally, and at UNH's InterOperability Lab, where I spent about a year testing routers for
-            IPv6. On my own time I've been building CareerOS, a workspace for job applications, and Deal Tracker, which watches
+            IPv6. On my own time I've been building Shotworthy, a workspace for job applications, and Deal Tracker, which watches
             for price errors on retail deals.
           </p>
         </div>

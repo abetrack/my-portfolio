@@ -36,9 +36,9 @@ export function ExtensionDemo({ active }) {
     <div className="grid h-full w-full place-items-center p-4">
       <div className="popup" data-active={active}>
         <div className="popup-window">
-          <img src="/careeros/popup-capture.jpg" alt="" width="460" height="593" className="popup-capture" />
+          <img src="/shotworthy/popup-capture.jpg" alt="" width="840" height="1030" className="popup-capture" />
           <div className="popup-fit">
-            <img src="/careeros/popup-fit.jpg" alt="" width="460" height="1271" className="popup-fit-inner" />
+            <img src="/shotworthy/popup-fit.jpg" alt="" width="840" height="2491" className="popup-fit-inner" />
           </div>
           <span className="popup-cursor" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="22" height="22">

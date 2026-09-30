@@ -42,16 +42,16 @@ function Shot({ src, alt, onClick, label, shadow }) {
   );
 }
 
-function CareerOS({ open }) {
+function Shotworthy({ open }) {
   const [step, setStep] = useState(0);
   const [playing, setPlaying] = useState(true);
   const frames = useMemo(
     () => [
       extensionFrame(),
-      imageFrame({ id: "score", src: "/careeros/fit-score.jpg", alt: "CareerOS showing a fit score of 60 for a nursing job, with strengths and gaps side by side" }),
-      imageFrame({ id: "tailor", src: "/careeros/evidence.jpg", alt: "The tailoring screen listing each résumé bullet and why it was chosen" }),
-      imageFrame({ id: "export", src: "/careeros/evidence.jpg", alt: "The finished one-page résumé preview", cls: "origin-bottom scale-[1.5]" }),
-      imageFrame({ id: "track", src: "/careeros/queue.jpg", alt: "The applications list showing what needs attention and each job's status" }),
+      imageFrame({ id: "score", src: "/shotworthy/score.jpg", alt: "A fit score of 68 for a full-stack engineer job, with strengths and gaps side by side" }),
+      imageFrame({ id: "tailor", src: "/shotworthy/tailor.jpg", alt: "The tailored résumé panel listing each bullet with the job terms it matches" }),
+      imageFrame({ id: "export", src: "/shotworthy/export.jpg", alt: "The finished one-page résumé with PDF and DOCX download buttons" }),
+      imageFrame({ id: "track", src: "/shotworthy/track.jpg", alt: "The applications list showing each job's fit score and status" }),
     ],
     []
   );
@@ -64,9 +64,8 @@ function CareerOS({ open }) {
     <Reveal as="article" className="grid gap-10 py-14 lg:grid-cols-12 lg:gap-12">
       <div className="lg:col-span-5">
         <p className="label">Full stack · AI · deployed on Railway and Vercel</p>
-        <h3 className="display mt-3 text-[clamp(2.2rem,5vw,3.6rem)] font-semibold">CareerOS</h3>
-        <p className="tag mt-1">Shipping under the product name Shotworthy</p>
-        <p className="mt-5 text-lg leading-snug">
+        <h3 className="display mt-3 text-[clamp(2.2rem,5vw,3.6rem)] font-semibold">Shotworthy</h3>
+                <p className="mt-5 text-lg leading-snug">
           Keeps one profile of everything you've done, scores a job against it, then builds a one-page résumé for that job from the
           profile. Every line on the résumé comes from you.
         </p>
@@ -94,13 +93,13 @@ function CareerOS({ open }) {
           Java 21, Spring Boot, PostgreSQL and Next.js, with the Claude API for scoring. <mark className="fig">350</mark> tests,{" "}
           <mark className="fig">32</mark> Flyway migrations, and sessions stored in the database through Spring Session.
         </p>
-        <OpenButton onClick={() => open("careeros")}>Walk through the product</OpenButton>
+        <OpenButton onClick={() => open("shotworthy")}>Walk through the product</OpenButton>
       </div>
 
       <figure className="lg:col-span-7">
         <Tour frames={frames} index={step} onIndex={setStep} playing={playing} className="shot-shadow rounded-2xl" />
         <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-3 text-sm text-slate">
-          <span>Demo data. The extension popup and the app, in the order you'd use them.</span>
+          <span>My own account, in the order you'd use it. Company names are hidden.</span>
           <button type="button" onClick={() => setPlaying((p) => !p)} className="link inline-flex min-h-[44px] items-center font-mono text-xs">
             {playing ? "Pause tour" : "Play tour"}
           </button>
@@ -252,7 +251,7 @@ export default function Projects() {
           <h2 className="display text-[clamp(2.4rem,6vw,4.5rem)] font-semibold">Side projects</h2>
         </Reveal>
         <div className="mt-8 divide-y divide-rule">
-          <CareerOS open={open} />
+          <Shotworthy open={open} />
           <DealTracker open={open} />
         </div>
         <MoreProjects open={open} />

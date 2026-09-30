@@ -167,5 +167,5 @@ export const links = {
   github: "https://github.com/abhinavsharma2636",
   linkedin: "https://www.linkedin.com/in/abhinav-sharma-0259091b0",
   resume: "/Resume.pdf",
-  careeros: "https://github.com/abhinavsharma2636/CareerOS",
+  shotworthy: "https://github.com/abhinavsharma2636/CareerOS",
 };
