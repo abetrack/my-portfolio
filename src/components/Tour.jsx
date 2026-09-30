@@ -90,7 +90,7 @@ export const imageFrame = ({ id, src, alt, ms = 4500, cls = "", style, label, ca
   ms,
   label,
   caption,
-  render: () => <img src={src} alt={alt} width="1600" height="1111" loading="lazy" className={`h-full w-full object-cover ${cls}`} style={style} />,
+  render: () => <img src={src} alt={alt} width="1600" height="1111" loading="lazy" className={`h-full w-full object-cover max-sm:object-contain ${cls}`} style={style} />,
 });
 
 export const extensionFrame = ({ label, caption } = {}) => ({

@@ -32,7 +32,7 @@ export default function Nav() {
   }, [active]);
 
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-3 z-30 flex justify-center px-3">
+    <header className="pointer-events-none fixed inset-x-0 top-[max(0.75rem,env(safe-area-inset-top))] z-30 flex justify-center px-3">
       <div className="pointer-events-auto flex max-w-full items-center gap-1 rounded-full border border-rule bg-paper/90 py-1.5 pl-2 pr-1.5 shadow-[0_12px_40px_-16px_rgba(0,0,0,0.6)] backdrop-blur-md sm:gap-3 lg:pl-6">
         <a href="#top" className="hidden whitespace-nowrap font-script text-[1.7rem] leading-none lg:block" aria-label="Abhinav Sharma, back to top">
           Abhinav Sharma

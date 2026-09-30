@@ -492,7 +492,7 @@ html.sheet-open {
 
 .tour-stage {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 1rem;
   border: 1px solid rgb(var(--rule));

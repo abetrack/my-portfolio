@@ -5,7 +5,7 @@ import CopyEmail from "./CopyEmail";
 
 export default function Hero() {
   return (
-    <section id="top" className="wrap pb-16 pt-28 sm:pt-32">
+    <section id="top" className="wrap pb-16 pt-24 sm:pt-32">
       <div className="grid gap-10 md:grid-cols-12 md:items-end">
         <div className="md:col-span-8">
           <p className="label fade-up" style={{ "--d": "0ms" }}>
@@ -34,15 +34,15 @@ export default function Hero() {
           </div>
         </div>
 
-        <figure className="fade-up md:col-span-4" style={{ "--d": "700ms" }}>
+        <figure className="fade-up flex items-center gap-4 md:col-span-4 md:block" style={{ "--d": "700ms" }}>
           <img
             src="/headshot.jpg"
             alt="Portrait of Abhinav Sharma"
             width="600"
             height="600"
-            className="aspect-square w-full max-w-[19rem] rounded-[2rem] border border-rule object-cover md:ml-auto"
+            className="aspect-square w-28 flex-none rounded-3xl border border-rule object-cover sm:w-36 md:w-full md:max-w-[19rem] md:rounded-[2rem] md:ml-auto"
           />
-          <figcaption className="mt-4 flex max-w-[19rem] items-center gap-2 rounded-full border border-rule bg-surface/60 px-4 py-2 text-sm md:ml-auto">
+          <figcaption className="flex items-center gap-2 rounded-full border border-rule bg-surface/60 px-4 py-2 text-sm md:mt-4 md:max-w-[19rem] md:ml-auto">
             <span className="h-2 w-2 flex-none rounded-full bg-live" aria-hidden="true" />
             <span>At Fidelity since Oct 2024</span>
           </figcaption>
